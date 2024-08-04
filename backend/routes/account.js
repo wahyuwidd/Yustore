@@ -4,9 +4,13 @@ const axios = require('axios');
 const crypto = require('crypto');
 require('dotenv').config();
 
-router.post('/vip-resellerr', async (req, res) => {
-    var API_ID = VIP_API_ID
-    var API_KEY = VIP_API_KEY
+const API_URL = process.env.API_URL;
+const vip_ApiId = process.env.VIP_API_ID;
+const vip_APiKey = process.env.VIP_API_KEY;
+
+router.post('/data', async (req, res) => {
+    var API_ID = vip_ApiId
+    var API_KEY = vip_APiKey
 
     var sign = crypto.createHash('md5')
         .update(API_ID + API_KEY)
@@ -31,7 +35,6 @@ router.post('/vip-resellerr', async (req, res) => {
 
     axios(config)
         .then(function (response) {
-            console.log(JSON.stringify(response.data));
             res.json({
                 status: true,
                 data: response.data.data

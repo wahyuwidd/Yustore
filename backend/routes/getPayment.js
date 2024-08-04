@@ -13,6 +13,8 @@ router.post('/list', async (req, res) => {
         });
         if(paymentMethodResponse.status == 200){
             res.json(paymentMethodResponse.data.data)
+        } else {
+            res.json(paymentMethodResponse.data)
         }
 })
 
