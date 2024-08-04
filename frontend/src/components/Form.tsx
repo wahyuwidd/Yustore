@@ -66,6 +66,7 @@ export default function Form({params, product, listProduct, listPayment, dict, s
         }
       }, [listProduct, product]);
       
+      
     useEffect(() => {
           let specialItems = product.isSpecial ? lowestPricedProducts.filter((produk) => product.product_special.includes(produk.name)) : []
           setSpecialItems(specialItems)
