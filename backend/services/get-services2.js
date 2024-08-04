@@ -6,6 +6,7 @@ require('dotenv').config();
 const API_URL = process.env.API_URL;
 const vip_ApiId = process.env.VIP_API_ID;
 const vip_APiKey = process.env.VIP_API_KEY;
+const BASE_URL = process.env.BASE_URL;
 
 const getServices2 = async () => {
     var sign = crypto.createHash('md5')
@@ -30,7 +31,8 @@ const getServices2 = async () => {
 
     try {
         const response = await axios(config);
-        const filteredData = response.data.data.filter(item => item.price.basic <= 30000 && item.price.basic > 1000);
+        const acc = await axios.post(`${BASE_URL}/account/data`);
+        const filteredData = response.data.data.filter(item => item.price.basic <= acc.data.data.balance && item.price.basic > 1000);
         const formattedData = filteredData.map(item => ({
             ...item,
             normal_price: {
