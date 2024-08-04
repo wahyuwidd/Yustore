@@ -73,7 +73,10 @@ export default function Form({params, product, listProduct, listPayment, dict, s
       }, [lowestPricedProducts, product]);   
         
     
-    const Items = product.isSpecial ? lowestPricedProducts.filter((produk) => !product.product_special.includes(produk.name)) : lowestPricedProducts;    
+    const Items = product.isSpecial ? lowestPricedProducts.filter((produk) => !product.product_special.includes(produk.name)) : lowestPricedProducts;
+    
+    console.log(Items);
+    
 
     const notifyError = (msg: string) => toast.error(msg);
     const notifySuccess = (msg: string) => toast.success(msg);
@@ -335,7 +338,7 @@ export default function Form({params, product, listProduct, listPayment, dict, s
             <div className="p-4">
                 <div className="flex flex-col space-y-4">
                     <section>
-                    {product.isSpecial && (
+                    {product.isSpecial && Items.length !== 0 && (
                         <><h3 className="pb-4 text-sm/6 font-semibold text-card-foreground">{product.title_product1 !== null ? product.title_product1 : 'Special Items'}</h3><div>
                                     <label className="sr-only">Select a variant list</label>
                                     <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3">
