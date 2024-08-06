@@ -70,7 +70,7 @@ const Description = ({ product, home }: { product: Product, home: Home }) => {
                 ): (
                   <><p dir='ltr'>
                   {home.title} menghadirkan penawaran spesial untuk gamers! Dapatkan layanan Top Up resmi dan legal untuk 
-                  <strong>{product.product_name}</strong> yang meningkatkan pengalaman bermain Anda dengan harga terjangkau.
+                  <strong> {product.product_name}</strong> yang meningkatkan pengalaman bermain Anda dengan harga terjangkau.
                 </p>
                 <p dir='ltr' className='mt-2'>
                   Top Up <strong>{product.product_name}</strong>: Resmi, Murah, Aman & Terpercaya.

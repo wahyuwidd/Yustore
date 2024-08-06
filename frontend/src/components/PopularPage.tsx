@@ -30,12 +30,12 @@ const PopularPage = ({currentLang}:{currentLang: string}) => {
     return ( 
         <>
         <div className="mb-5">
-              <h3 className="text-lg font-semibold uppercase leading-relaxed tracking-wider">
-                🔥 POPULER SEKARANG!
-              </h3>
-              <p className="pl-6 text-xs"> 
-                Berikut adalah beberapa produk yang paling populer saat ini.
-              </p>
+          <h3 className="text-lg font-semibold uppercase leading-relaxed tracking-wider">
+        🌟 POPULER SAAT INI!
+        </h3>
+        <p className="pl-6 text-xs">
+            Temukan produk terpopuler yang sedang digemari banyak orang.
+        </p>
          {loading ? (
            <SkeletonPage />
          ): (
