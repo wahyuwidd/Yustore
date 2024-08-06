@@ -68,34 +68,32 @@ const Description = ({ product, home }: { product: Product, home: Home }) => {
                   </p>
                   </>
                 ): (
-                  <><p dir='ltr'>{home.title} mempersembahkan penawaran istimewa untuk para gamers sejati! Kami hadir dengan layanan Top Up resmi dan 100% legal untuk
-                        <strong> {product.product_name}</strong>
-                        , yang dirancang khusus untuk meningkatkan pengalaman bermain game Anda. Nikmati kemudahan, keamanan, dan harga yang terjangkau dalam setiap transaksi Top Up Anda.
-                      </p><p dir='ltr' className='mt-2'>
-                          Top Up
-                          <strong> {product.product_name} </strong>
-                          Resmi, Murah, Aman, & Terpercaya
-                        </p><p dir='ltr' className='mt-2'>
-                          Berikut adalah langkah-langkah sederhana untuk Top Up
-                          <strong> {product.product_name} </strong>
-                          :
-                        </p><p dir='ltr' className='mt-2'>
-                          1. Masukkan Data Akun
-                          <strong> {product.product_name} </strong>
-                          (Pastikan data yang Anda masukkan sudah benar dan lengkap)
-                          <br />
-                          2. Pilih Nominal Diamond (Kami menyediakan berbagai pilihan nominal yang bisa Anda sesuaikan dengan kebutuhan)
-                          <br />
-                          3. Pilih Metode Pembayaran (Kenyamanan Anda adalah prioritas kami. Kami menyediakan berbagai metode pembayaran yang mudah dan aman)
-                          <br />
-                          4. Masukkan Kode Promo Jika Ada (Gunakan kode promo untuk mendapatkan penawaran spesial dan diskon menarik)
-                          <br />
-                          5. Masukkan Nomor Whatsapp dan Email yang Valid (Dapatkan konfirmasi dan notifikasi langsung ke kontak Anda)
-                          <br />
-                          6. Klik Order Now & Lakukan Pembayaran (Proses mudah dan cepat, kini Anda tinggal selangkah lagi untuk meningkatkan pengalaman gaming Anda)
-                          <br />
-                          7. Diamond Akan Masuk Otomatis ke Akun Anda (Tunggu dan rasakan sensasi permainan yang lebih seru dengan cepat dan aman)
-                        </p></>
+                  <><p dir='ltr'>
+                  {home.title} menghadirkan penawaran spesial untuk gamers! Dapatkan layanan Top Up resmi dan legal untuk 
+                  <strong>{product.product_name}</strong> yang meningkatkan pengalaman bermain Anda dengan harga terjangkau.
+                </p>
+                <p dir='ltr' className='mt-2'>
+                  Top Up <strong>{product.product_name}</strong>: Resmi, Murah, Aman & Terpercaya.
+                </p>
+                <p dir='ltr' className='mt-2'>
+                  Cara Top Up <strong>{product.product_name}</strong>:
+                </p>
+                <p dir='ltr' className='mt-2'>
+                  1. Masukkan Data Akun (Pastikan benar dan lengkap)
+                  <br />
+                  2. Pilih Nominal Diamond sesuai kebutuhan
+                  <br />
+                  3. Pilih Metode Pembayaran yang mudah dan aman
+                  <br />
+                  4. Masukkan Kode Promo (jika ada) untuk diskon
+                  <br />
+                  5. Masukkan Nomor Whatsapp & Email valid untuk konfirmasi
+                  <br />
+                  6. Klik Order Now & Bayar
+                  <br />
+                  7. Diamond otomatis masuk ke akun Anda
+                </p>
+                </>
                 )}
               </div>
             </div>
