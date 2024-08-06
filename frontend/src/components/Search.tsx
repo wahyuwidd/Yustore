@@ -21,11 +21,12 @@ import { useParams } from "next/navigation"
 const SearchToggle = () => {
   const param = useParams();
   const CurrentLang = param.lang ? param.lang.toString() : '';
+  const API_URL = process.env.NEXT_PUBLIC_API_URL;
   const [open, setOpen] = useState(false);
   const [product, setProduct] = useState<Product[]>([]);
   
     useEffect(() => {
-    fetch('http://192.168.1.15:4000/search')
+    fetch(`${API_URL}/search`)
       .then(Response => Response.json())
       .then(data => setProduct(data))
       const down = (e: KeyboardEvent) => {

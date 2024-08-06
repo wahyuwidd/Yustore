@@ -18,7 +18,7 @@ export default async function RootLayout({
   const API_URL = process.env.NEXT_PUBLIC_API_URL;
   let data 
   try {
-    const response = await axios.get(API_URL + '/home');
+    const response = await axios.get(API_URL + '/home?timestamp=' + Date.now());
     data = response.data;
   } catch (error) {
     console.error("Error fetching data:", error);
