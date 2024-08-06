@@ -122,7 +122,7 @@ const Navbar = (home: Home) => {
                     <button className="text-murky-400 -m-2 inline-flex items-center justify-center rounded-md p-2"><span className="sr-only">Close menu</span><XIcon onClick={toggleDrawer} className="h-6 w-6" /></button>
                     <div className="flex items-center">
                       <a className="relative w-24 h-10" href={`/${lang}`}>
-                        <Image src={home.url_logo} alt="" width={90} height={90} className="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;" />
+                        <img src={home.url_logo} alt="" width={90} height={90} className="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;" />
                       </a>
                     </div>
                   </div>
