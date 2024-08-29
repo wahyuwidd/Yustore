@@ -75,9 +75,6 @@ export default function Form({params, product, listProduct, listPayment, dict, s
         
     
     const Items = product.isSpecial ? lowestPricedProducts.filter((produk) => !product.product_special.includes(produk.name)) : lowestPricedProducts;
-    
-    console.log(Items);
-    
 
     const notifyError = (msg: string) => toast.error(msg);
     const notifySuccess = (msg: string) => toast.success(msg);
